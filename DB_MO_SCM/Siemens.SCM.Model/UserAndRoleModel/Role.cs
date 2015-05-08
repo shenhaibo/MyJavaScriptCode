@@ -41,5 +41,6 @@ namespace Siemens.SCM.Model
         public virtual ICollection<Role> Children { get; set; }
 
         public virtual ICollection<UserProfile> Users { get; set; }
+        public virtual ICollection<Privilege> Privileges { get; set; }
     }
 }
