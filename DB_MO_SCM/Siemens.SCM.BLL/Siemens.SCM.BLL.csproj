@@ -40,8 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrivilegeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManager.cs" />
     <Compile Include="UserRoleManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Siemens.SCM.DAL\Siemens.SCM.DAL.csproj">
+      <Project>{70D7BFBA-ADC2-4B3E-B909-EB0A7469D4EE}</Project>
+      <Name>Siemens.SCM.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siemens.SCM.Model\Siemens.SCM.Model.csproj">
+      <Project>{2E151441-CFDD-4676-9D2C-8C837C8841BA}</Project>
+      <Name>Siemens.SCM.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

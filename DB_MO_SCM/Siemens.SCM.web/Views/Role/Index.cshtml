@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("AddRole", "Role"))
+{
+    @Html.Label("Role Name:") 
+    @Html.TextBox("RoleName")
+    <input type="submit" value="Add" />
+}
+<br />
+<br />
+<br />
+
+@using (Html.BeginForm("UpdateRole", "Role"))
+{
+    @Html.Label("Role Name:") 
+    @Html.TextBox("RoleName")
+    <input type="submit" value="Update" />
+}

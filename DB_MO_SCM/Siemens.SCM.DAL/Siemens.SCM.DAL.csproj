@@ -46,11 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseOperate.cs" />
+    <Compile Include="PrivilegeRecordManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleRecord.cs" />
+    <Compile Include="UserRecordManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Siemens.SCM.Model\Siemens.SCM.Model.csproj">
+      <Project>{2E151441-CFDD-4676-9D2C-8C837C8841BA}</Project>
+      <Name>Siemens.SCM.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

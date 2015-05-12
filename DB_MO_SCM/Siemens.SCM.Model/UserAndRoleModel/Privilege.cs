@@ -22,7 +22,10 @@ namespace Siemens.SCM.Model
         public string ControlName { get; set; }
 
         [MaxLength(100)]
-        public string ActionName{get;set;}
+        public string ActionName { get; set; }
+
+        [MaxLength(500)]
+        public string Description { get; set; }
 
         public virtual ICollection<Role> Roles { get; set; }
     }

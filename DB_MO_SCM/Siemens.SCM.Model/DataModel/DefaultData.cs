@@ -14,7 +14,17 @@ namespace Siemens.SCM.Model.DataModel
         [Column(Order = 0)]
         public int ID { get; set; }
 
+        [Column(Order = 1)]
         public int DefaultDataTypeID { get; set; }
+
+        [Column(Order = 2)]
+        public string Name { get; set; }
+
+        [Column(Order = 3)]
+        public string Characterization { get; set; }
+
+        [Column(Order=4)]
+        public bool Enabled { get; set; }
 
         public virtual DefaultDataType defaultDataType { get; set; }
     }

@@ -23,7 +23,12 @@ namespace Siemens.SCM.web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/HomeIndex").Include("~/Scripts/Home/HomeIndexJScript.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/uploadify").Include("~/Scripts/uploadify/jquery.uploadify-{version}.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/bundles/uploadify/css").Include("~/Scripts/uploadify/uploadify.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

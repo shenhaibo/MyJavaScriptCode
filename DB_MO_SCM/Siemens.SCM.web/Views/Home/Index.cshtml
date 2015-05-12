@@ -2,6 +2,32 @@
     ViewBag.Title = "Index";
 }
 
+@*@Scripts.Render("~/bundles/jquery")*@
+@Scripts.Render("~/bundles/uploadify")
+@Styles.Render("~/bundles/uploadify/css")
+@Scripts.Render("~/bundles/HomeIndex")
 <h2>Home Index</h2>
 
 @Html.ActionLink("LoginOut", "LogOut", "Login");
+<br />
+<br />
+<br />
+
+
+<div id="div"></div>
+<input type="button" id="ShowText" value="ShowText" />
+
+<br />
+<br />
+<br />
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <input type="file" name="FileUpload" />
+    <input type="submit" name="Submit" id="Submit" value="Upload" />
+}
+<br />
+<br />
+<br />
+<div >
+<input id="Filedata" type="file" name="Filedata" />
+</div>

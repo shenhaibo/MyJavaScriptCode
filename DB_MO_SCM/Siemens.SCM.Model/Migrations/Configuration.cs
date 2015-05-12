@@ -5,14 +5,14 @@ namespace Siemens.SCM.Model.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Siemens.SCM.Model.DataModel.DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Siemens.SCM.Model.UsersContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Siemens.SCM.Model.DataModel.DataContext context)
+        protected override void Seed(Siemens.SCM.Model.UsersContext context)
         {
             //  This method will be called after migrating to the latest version.
 
