@@ -64,7 +64,15 @@ namespace Siemens.SCM.web.Controllers
         [HttpPost]
         public ActionResult DownloadFile()
         {
-            return File("/Temp/Test.xlsx","application/octet-stream","Test.xlsx");
+            GC.Collect();
+            string path = Server.MapPath("/Temp/Test.xlsx");//这两句是楼主的代码，下面是我的代码
+            FileStream fs = new FileStream(path, FileMode.Open);
+            byte[] buffer = new byte[fs.Length];
+            fs.Read(buffer, 0, buffer.Length);
+            fs.Close();
+            System.IO.File.Delete(path);
+            return File(buffer, "application/octet-stream", "Test.xlsx");
+            //System.IO.File.Delete(Server.MapPath("/Temp/Test.xlsx"));
             //return File("/Temp/Test.xlsx", "application/x-excel");//, "Test.xlsx");
             //return File("/Temp/Test.xlsx", "application/vnd.ms-excel"); //文件后缀名格式为Excel 2003
             //return File("/Temp/Test.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");//, "Test.xlsx");  //文件后缀名格式为Excel 2007
