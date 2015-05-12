@@ -59,5 +59,15 @@ namespace Siemens.SCM.web.Controllers
             }
             return Content("");
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult DownloadFile()
+        {
+            return File("/Temp/Test.xlsx","application/octet-stream","Test.xlsx");
+            //return File("/Temp/Test.xlsx", "application/x-excel");//, "Test.xlsx");
+            //return File("/Temp/Test.xlsx", "application/vnd.ms-excel"); //文件后缀名格式为Excel 2003
+            //return File("/Temp/Test.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");//, "Test.xlsx");  //文件后缀名格式为Excel 2007
+        }
     }
 }

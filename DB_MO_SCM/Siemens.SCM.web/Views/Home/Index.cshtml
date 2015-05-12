@@ -31,3 +31,9 @@
 <div >
 <input id="Filedata" type="file" name="Filedata" />
 </div>
+
+
+@using (Html.BeginForm("DownloadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <input type="submit" name="Submit" id="Submit" value="Download File" />
+}
