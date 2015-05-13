@@ -1,0 +1,17 @@
+1.Code First实体框架迁移
+Enable-Migrations
+Add-Migration
+Update-database
+
+2.Control, Action 
+
+3.user Login LoginOut
+
+4.Role Manager
+
+5.返回Json数据
+
+6.Download Excel
+
+7.Upload file
+
